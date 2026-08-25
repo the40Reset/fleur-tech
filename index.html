@@ -195,6 +195,192 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);color:r
   .compare{grid-template-columns:1fr}.beforeafter{grid-template-columns:1fr}.arrow{transform:rotate(90deg);text-align:center}
   .statement{padding:30px}.statement h2{font-size:41px}.cta h2{font-size:42px}
 }
+
+/* ===== MOBILE POLISH — FINAL ===== */
+section[id]{scroll-margin-top:76px}
+
+@media(max-width:760px){
+  html,body{overflow-x:hidden}
+  .wrap{width:min(var(--max),calc(100% - 28px))}
+  section{padding:60px 0}
+  h2{font-size:34px;line-height:1.04}
+  p.lead{font-size:15px;line-height:1.65}
+
+  /* Navigation */
+  nav{background:rgba(251,250,247,.96)}
+  .navin{height:64px;gap:12px}
+  .brand{font-size:13px;letter-spacing:.045em;white-space:nowrap}
+  .brand-dot{width:9px;height:9px;box-shadow:0 0 0 4px rgba(200,148,45,.10)}
+  .navlinks{gap:0}
+  .navlinks a:not(.navcta){display:none}
+  .navcta{
+    display:inline-flex!important;
+    width:auto!important;
+    min-height:37px!important;
+    padding:0 13px!important;
+    font-size:10.5px!important;
+    white-space:nowrap;
+  }
+
+  /* Hero: copy first, approved image becomes a dedicated cinematic block below */
+  .hero{min-height:auto;background:#f8f5ef}
+  .hero .wrap{
+    min-height:auto;
+    display:block;
+    padding-top:40px;
+    padding-bottom:356px;
+  }
+  .hero-copy{width:100%;max-width:none}
+  .hero-bg{
+    inset:auto 0 0 0;
+    height:365px;
+    background-size:cover;
+    background-position:72% center;
+    transform:none;
+  }
+  .hero-bg::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(180deg,#f8f5ef 0%,rgba(248,245,239,.42) 15%,rgba(248,245,239,0) 40%,rgba(7,23,39,.06) 100%);
+    pointer-events:none;
+  }
+  .hero::after{height:58px}
+  .badge{
+    max-width:100%;
+    white-space:normal;
+    font-size:8.5px;
+    line-height:1.35;
+    letter-spacing:.065em;
+    padding:7px 10px;
+  }
+  .hero h1{
+    margin-top:18px;
+    font-size:43px;
+    line-height:.99;
+    letter-spacing:-.042em;
+  }
+  .hero-sub{
+    margin-top:18px;
+    font-size:15.5px;
+    line-height:1.64;
+  }
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:9px;
+    margin-top:23px;
+  }
+  .hero-actions .btn{width:100%;min-height:50px}
+  .hero-points{
+    grid-template-columns:1fr;
+    gap:0;
+    margin-top:23px;
+    padding-top:13px;
+  }
+  .hpoint{
+    margin:0;
+    padding:11px 0;
+    border-right:0;
+    border-bottom:1px solid rgba(7,23,39,.09);
+    font-size:11px;
+    align-items:center;
+  }
+  .hpoint:last-child{border-bottom:0}
+  .hicon{width:31px;height:31px;flex-basis:31px}
+  .hero-note{
+    margin-top:10px;
+    font-size:8.8px;
+    line-height:1.45;
+    border-radius:10px;
+  }
+
+  /* Value strip */
+  .value-grid{grid-template-columns:1fr}
+  .value{
+    padding:18px 0;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.10);
+  }
+  .value:last-child{border-bottom:0}
+  .value b{font-size:10px}
+  .value span{font-size:12.5px;margin-top:5px}
+
+  /* Sections and cards */
+  .section-head.center{text-align:left}
+  .pain-grid,.process-grid{margin-top:28px;grid-template-columns:1fr}
+  .pain-card{padding:23px}
+  .pain-card h3{margin-top:18px;font-size:23px}
+  .pain-card p{font-size:13.5px}
+
+  .statement{
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:25px;
+    border-radius:22px;
+  }
+  .statement h2{font-size:35px}
+  .statement-copy{font-size:14px}
+
+  .compare{grid-template-columns:1fr;margin-top:28px}
+  .compare-card{padding:24px}
+  ul.clean{gap:13px}
+
+  .workflow-grid{grid-template-columns:1fr;margin-top:28px}
+  .workflow{min-height:0;padding:21px}
+
+  .process-card{padding:24px}
+  .process-card h3{font-size:21px}
+  .commitments{grid-template-columns:1fr;margin-top:18px}
+  .commit{padding:14px 0}
+
+  .ba-card{
+    grid-template-columns:1fr;
+    gap:22px;
+    padding:23px;
+    margin-top:28px;
+  }
+  .ba-card h3{font-size:28px}
+  .beforeafter{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg);text-align:center}
+
+  .founder-grid{grid-template-columns:1fr}
+  .founder-card,.fit-card{padding:25px}
+  .fit-card h3{font-size:27px}
+
+  .support-grid{grid-template-columns:1fr;margin-top:28px}
+
+  /* Conversion section */
+  .cta{padding:62px 0}
+  .cta-box{grid-template-columns:1fr;gap:28px}
+  .cta h2{font-size:39px;line-height:1.02}
+  .cta-copy{font-size:15px;line-height:1.65}
+  form{padding:20px;border-radius:18px}
+  .field input,.field textarea{font-size:16px} /* prevents iOS zoom */
+  .field textarea{min-height:110px}
+
+  .footerin{
+    padding:24px 0 30px;
+    flex-direction:column;
+    gap:7px;
+    line-height:1.5;
+  }
+
+  /* Prevent old global mobile rule from stretching nav CTA */
+  .btn.navcta{width:auto!important}
+}
+
+@media(max-width:420px){
+  .hero .wrap{padding-top:34px;padding-bottom:325px}
+  .hero-bg{height:332px;background-position:73% center}
+  .hero h1{font-size:39px}
+  h2{font-size:32px}
+  .statement h2{font-size:33px}
+  .cta h2{font-size:36px}
+  .badge{font-size:8px}
+}
+
 </style>
 </head>
 <body>
@@ -206,7 +392,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);color:r
       <a href="#approach">Pendekatan</a>
       <a href="#process">Cara Kerja</a>
       <a href="#fit">Untuk Siapa</a>
-      <a class="btn gold sm navcta" href="#audit">Audit 30 Menit</a>
+      <a class="btn gold sm navcta" href="#konsultasi">Konsultasi</a>
     </div>
   </div>
 </nav>
@@ -220,7 +406,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);color:r
         <h1>Bisnis Anda berjalan.<br>Tapi sistem kerjanya masih <span class="gold">berantakan.</span></h1>
         <p class="hero-sub">Fleur Tech membantu bisnis 20–300 karyawan merapikan <strong>satu workflow yang paling nyangkut</strong> di WhatsApp, Excel, dan email menjadi sistem digital yang benar-benar dipakai tim.</p>
         <div class="hero-actions">
-          <a class="btn gold" href="#audit">Jadwalkan Audit 30 Menit →</a>
+          <a class="btn gold" href="#konsultasi">Jadwalkan Konsultasi 30 Menit →</a>
           <a class="btn ghost" href="#workflow">Lihat Contoh Workflow</a>
         </div>
         <div class="hero-points">
@@ -236,7 +422,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);color:r
   <div class="value-strip">
     <div class="wrap value-grid">
       <div class="value"><b>Mulai Kecil</b><span>Satu workflow dulu. Tidak perlu mengganti seluruh sistem.</span></div>
-      <div class="value"><b>Pilot 14 Hari</b><span>Buktikan di proses nyata sebelum memperbesar scope.</span></div>
+      <div class="value"><b>Pilot 14 Hari</b><span>Buktikan di proses nyata sebelum memperbesar cakupan.</span></div>
       <div class="value"><b>30 Hari Garansi Adopsi</b><span>Kalau belum dipakai tim, kami iterasi tanpa biaya tambahan.</span></div>
       <div class="value"><b>Founder-Led</b><span>Discovery sampai implementasi tidak dilempar ke vendor lain.</span></div>
     </div>
@@ -268,17 +454,17 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);color:r
 
   <section id="approach">
     <div class="wrap">
-      <div class="section-head center reveal"><div class="kicker">Pendekatan</div><h2>Bukan proyek besar. Bukan perubahan total.</h2><p class="lead">Mulai dari satu friction yang nyata. Buktikan nilainya. Baru kembangkan.</p></div>
+      <div class="section-head center reveal"><div class="kicker">Pendekatan</div><h2>Bukan proyek besar. Bukan perubahan total.</h2><p class="lead">Mulai dari satu masalah yang nyata. Buktikan nilainya. Baru kembangkan.</p></div>
       <div class="compare">
-        <div class="compare-card reveal"><div class="compare-title">Pendekatan software modul</div><ul class="clean"><li><span class="mark x">×</span><span>Mulai dari fitur dan modul yang tersedia.</span></li><li><span class="mark x">×</span><span>Tim menyesuaikan cara kerja ke struktur software.</span></li><li><span class="mark x">×</span><span>Scope besar sebelum value pertama terbukti.</span></li><li><span class="mark x">×</span><span>Implementasi selesai belum tentu sistem dipakai.</span></li></ul></div>
-        <div class="compare-card darkcard reveal"><div class="compare-title">Pendekatan Fleur Tech</div><ul class="clean"><li><span class="mark ok">✓</span><span>Petakan satu workflow yang paling menghambat.</span></li><li><span class="mark ok">✓</span><span>Sederhanakan prosesnya sebelum sistem dibangun.</span></li><li><span class="mark ok">✓</span><span>Pilot kecil dulu di proses nyata.</span></li><li><span class="mark ok">✓</span><span>Lanjut hanya kalau tim pakai dan value-nya terlihat.</span></li></ul><div class="compare-callout">Lebih sedikit perubahan. Lebih cepat kelihatan apakah benar-benar berguna.</div></div>
+        <div class="compare-card reveal"><div class="compare-title">Pendekatan software modul</div><ul class="clean"><li><span class="mark x">×</span><span>Mulai dari fitur dan modul yang tersedia.</span></li><li><span class="mark x">×</span><span>Tim menyesuaikan cara kerja ke struktur software.</span></li><li><span class="mark x">×</span><span>Cakupan besar sebelum nilai pertama terbukti.</span></li><li><span class="mark x">×</span><span>Implementasi selesai belum tentu sistem dipakai.</span></li></ul></div>
+        <div class="compare-card darkcard reveal"><div class="compare-title">Pendekatan Fleur Tech</div><ul class="clean"><li><span class="mark ok">✓</span><span>Petakan satu workflow yang paling menghambat.</span></li><li><span class="mark ok">✓</span><span>Sederhanakan prosesnya sebelum sistem dibangun.</span></li><li><span class="mark ok">✓</span><span>Pilot kecil dulu di proses nyata.</span></li><li><span class="mark ok">✓</span><span>Lanjut hanya kalau tim pakai dan nilainya terlihat.</span></li></ul><div class="compare-callout">Lebih sedikit perubahan. Lebih cepat kelihatan apakah benar-benar berguna.</div></div>
       </div>
     </div>
   </section>
 
   <section id="workflow" style="background:#fff">
     <div class="wrap">
-      <div class="section-head reveal"><div class="kicker">Contoh Workflow</div><h2>Mulai dari proses yang paling sering bikin orang bolak-balik.</h2><p class="lead">Contoh ini menggambarkan area yang bisa dipetakan dan didigitalkan. Scope aktual mengikuti kebutuhan bisnis Anda.</p></div>
+      <div class="section-head reveal"><div class="kicker">Contoh Workflow</div><h2>Mulai dari proses yang paling sering bikin orang bolak-balik.</h2><p class="lead">Contoh ini menggambarkan area yang bisa dipetakan dan didigitalkan. Cakupan aktual mengikuti kebutuhan bisnis Anda.</p></div>
       <div class="workflow-grid">
         <div class="workflow reveal"><div class="wtag">Control</div><h3>Approval & Procurement</h3><p>Purchase request, checking budget, approval, PO, vendor, tracking.</p><div class="route">Request → Check → Approve → PO</div></div>
         <div class="workflow reveal"><div class="wtag">Revenue</div><h3>Sales & CRM</h3><p>Lead masuk, follow-up, quotation, negotiation, closing dan handoff.</p><div class="route">Lead → Follow-up → Quote → Close</div></div>
@@ -292,9 +478,9 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);color:r
     <div class="wrap">
       <div class="section-head reveal"><div class="kicker">Cara kerja Fleur Tech</div><h2>Mulai kecil.<br>Buktikan cepat.<br>Kembangkan kalau cocok.</h2><p class="lead">Tidak perlu enam bulan untuk tahu apakah satu workflow membantu atau tidak.</p></div>
       <div class="process-grid">
-        <div class="process-card reveal"><div class="step">1</div><h3>Petakan</h3><p>Audit satu workflow: request, approval, handoff, bottleneck, data, dan siapa yang terlibat.</p><span class="time">Discovery 2–3 hari</span></div>
-        <div class="process-card reveal"><div class="step">2</div><h3>Buktikan</h3><p>Bangun workflow inti dan pilot bersama user yang benar-benar menjalankan proses tersebut.</p><span class="time">Pilot 14 hari</span></div>
-        <div class="process-card reveal"><div class="step">3</div><h3>Kembangkan</h3><p>Kalau dipakai dan valuenya terlihat, tambahkan workflow berikutnya tanpa mulai dari nol.</p><span class="time">Expand bertahap</span></div>
+        <div class="process-card reveal"><div class="step">1</div><h3>Petakan</h3><p>Konsultasi awal untuk memetakan satu workflow: request, approval, handoff, bottleneck, data, dan siapa yang terlibat.</p><span class="time">Discovery 2–3 hari</span></div>
+        <div class="process-card reveal"><div class="step">2</div><h3>Buktikan</h3><p>Bangun workflow inti dan pilot bersama pengguna yang benar-benar menjalankan proses tersebut.</p><span class="time">Pilot 14 hari</span></div>
+        <div class="process-card reveal"><div class="step">3</div><h3>Kembangkan</h3><p>Kalau dipakai dan nilainya terlihat, tambahkan workflow berikutnya tanpa mulai dari nol.</p><span class="time">Kembangkan bertahap</span></div>
       </div>
       <div class="commitments reveal"><div class="commit"><b>Pilot-First</b>Tidak langsung menjual transformasi besar.</div><div class="commit"><b>Adoption-First</b>Selesai dibangun bukan berarti selesai bekerja.</div><div class="commit"><b>Measured</b>Baseline dan hasil ditentukan dari proses aktual.</div><div class="commit"><b>After Go-Live</b>Training, maintenance dan enhancement tetap ada.</div></div>
     </div>
@@ -315,21 +501,21 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);color:r
       <div class="founder-card reveal">
         <div class="avatar">FT</div>
         <div class="who"><b>Fleur Tech</b><span>Kenapa pendekatannya workflow-first</span></div>
-        <div class="story">Ada bisnis yang sudah punya puluhan atau ratusan orang, tetapi owner masih harus membuka WhatsApp malam-malam untuk approve PO, mengejar status, atau mencari data yang seharusnya sudah terlihat. <strong>Masalahnya bukan selalu kekurangan fitur.</strong> Sering kali satu workflow penting saja belum benar-benar beres.</div>
+        <div class="story">Ada bisnis yang sudah punya puluhan atau ratusan orang, tetapi owner masih harus membuka WhatsApp malam-malam untuk menyetujui PO, mengejar status, atau mencari data yang seharusnya sudah terlihat. <strong>Masalahnya bukan selalu kekurangan fitur.</strong> Sering kali satu workflow penting saja belum benar-benar beres.</div>
         <div class="sign">Dibangun untuk bisnis yang ingin tumbuh tanpa owner ikut menjadi pusat semua urusan operasional.</div>
       </div>
-      <div class="fit-card reveal"><div class="kicker">Ideal Fit</div><h3>Cocok untuk Anda jika...</h3><div class="fit-list"><div class="fit-item"><span class="tick">✓</span><span>20–300 karyawan dan beberapa approval lintas tim.</span></div><div class="fit-item"><span class="tick">✓</span><span>Owner / manager kurang visibility terhadap progress.</span></div><div class="fit-item"><span class="tick">✓</span><span>Proses penting masih bergantung pada WA, Excel, email, atau orang tertentu.</span></div><div class="fit-item"><span class="tick">✓</span><span>ERP terasa terlalu besar, tetapi spreadsheet sudah tidak cukup.</span></div><div class="fit-item"><span class="tick">✓</span><span>Ingin membuktikan satu use case dulu sebelum expand.</span></div></div><div class="guarantee"><strong>30 Hari Garansi Adopsi</strong><br>Jika setelah pilot workflow belum dipakai sebagaimana mestinya, Fleur Tech melakukan iterasi tanpa biaya implementasi tambahan dalam periode garansi.</div></div>
+      <div class="fit-card reveal"><div class="kicker">Ideal Fit</div><h3>Cocok untuk Anda jika...</h3><div class="fit-list"><div class="fit-item"><span class="tick">✓</span><span>20–300 karyawan dan beberapa approval lintas tim.</span></div><div class="fit-item"><span class="tick">✓</span><span>Owner / manager kurang punya visibilitas terhadap progres.</span></div><div class="fit-item"><span class="tick">✓</span><span>Proses penting masih bergantung pada WA, Excel, email, atau orang tertentu.</span></div><div class="fit-item"><span class="tick">✓</span><span>ERP terasa terlalu besar, tetapi spreadsheet sudah tidak cukup.</span></div><div class="fit-item"><span class="tick">✓</span><span>Ingin membuktikan satu kebutuhan nyata dulu sebelum dikembangkan.</span></div></div><div class="guarantee"><strong>30 Hari Garansi Adopsi</strong><br>Jika setelah pilot workflow belum dipakai sebagaimana mestinya, Fleur Tech melakukan iterasi tanpa biaya implementasi tambahan dalam periode garansi.</div></div>
     </div>
   </section>
 
   <section>
-    <div class="wrap"><div class="section-head center reveal"><div class="kicker">Setelah Go-Live</div><h2>Sistemnya harus dipakai. Bukan cuma selesai dibuat.</h2></div><div class="support-grid"><div class="support reveal"><b>Onboarding</b><p>Setup user, role, dan data awal untuk penggunaan pertama.</p></div><div class="support reveal"><b>Training per Role</b><p>Owner, admin, dan staff mendapat konteks penggunaan yang relevan.</p></div><div class="support reveal"><b>Maintenance</b><p>Bug fixing dan penyesuaian teknis setelah implementasi.</p></div><div class="support reveal"><b>Enhancement</b><p>Iterasi berdasarkan kebutuhan nyata setelah workflow digunakan.</p></div></div></div>
+    <div class="wrap"><div class="section-head center reveal"><div class="kicker">Setelah Go-Live</div><h2>Sistemnya harus dipakai. Bukan cuma selesai dibuat.</h2></div><div class="support-grid"><div class="support reveal"><b>Onboarding</b><p>Pengaturan akun, peran, dan data awal untuk penggunaan pertama.</p></div><div class="support reveal"><b>Training per Role</b><p>Owner, admin, dan staf mendapat konteks penggunaan yang relevan.</p></div><div class="support reveal"><b>Maintenance</b><p>Perbaikan bug dan penyesuaian teknis setelah implementasi.</p></div><div class="support reveal"><b>Enhancement</b><p>Iterasi berdasarkan kebutuhan nyata setelah workflow digunakan.</p></div></div></div>
   </section>
 
-  <section class="cta" id="audit">
+  <section class="cta" id="konsultasi">
     <div class="wrap cta-box">
-      <div class="reveal"><div class="kicker">Audit 30 Menit</div><h2>Stop jadi <span class="gold">CS</span> di bisnis sendiri.</h2><p class="cta-copy">Ceritakan satu workflow yang paling bikin tim bolak-balik chat dan follow-up. Kita lihat dulu apakah masalahnya ada di proses, handoff, approval, atau memang perlu sistem.</p><div class="cta-points"><span>✓ Fokus ke satu workflow, bukan seluruh perusahaan.</span><span>✓ Tidak harus lanjut project setelah audit.</span><span>✓ Kalau tidak cocok, kami bilang dari awal.</span></div></div>
-      <form id="leadForm" class="reveal"><div class="field"><label>NAMA ANDA</label><input id="name" placeholder="Nama" required></div><div class="field"><label>PERUSAHAAN</label><input id="company" placeholder="Nama perusahaan · jumlah karyawan"></div><div class="field"><label>WORKFLOW YANG PALING MENGHAMBAT</label><textarea id="problemField" placeholder="Contoh: purchase request masih lewat WA, finance cek manual, owner approve satu-satu." required></textarea></div><button class="btn dark" style="width:100%" type="submit">Minta Audit 30 Menit →</button><div class="form-note">Tidak ada kewajiban lanjut project setelah audit. Fokus pertama kita hanya membaca satu workflow yang paling menghambat.</div><div class="success" id="success">Terima kasih. Detail Anda sudah tercatat di halaman ini. Tim Fleur Tech akan menindaklanjuti setelah form dihubungkan ke kanal lead resmi.</div></form>
+      <div class="reveal"><div class="kicker">Konsultasi 30 Menit</div><h2>Stop jadi <span class="gold">CS</span> di bisnis sendiri.</h2><p class="cta-copy">Ceritakan satu workflow yang paling bikin tim bolak-balik chat dan follow-up. Kita lihat dulu apakah masalahnya ada di proses, handoff, approval, atau memang perlu sistem.</p><div class="cta-points"><span>✓ Fokus ke satu workflow, bukan seluruh perusahaan.</span><span>✓ Tidak harus lanjut proyek setelah konsultasi.</span><span>✓ Kalau tidak cocok, kami bilang dari awal.</span></div></div>
+      <form id="leadForm" class="reveal"><div class="field"><label>NAMA ANDA</label><input id="name" placeholder="Nama" required></div><div class="field"><label>PERUSAHAAN</label><input id="company" placeholder="Nama perusahaan · jumlah karyawan"></div><div class="field"><label>WORKFLOW YANG PALING MENGHAMBAT</label><textarea id="problemField" placeholder="Contoh: purchase request masih lewat WA, finance cek manual, owner harus approve satu-satu." required></textarea></div><button class="btn dark" style="width:100%" type="submit">Minta Konsultasi 30 Menit →</button><div class="form-note">Tidak ada kewajiban lanjut proyek setelah konsultasi. Fokus pertama kita hanya membaca satu workflow yang paling menghambat.</div><div class="success" id="success">Terima kasih. Detail Anda sudah tercatat di halaman ini. Tim Fleur Tech akan menindaklanjuti setelah form dihubungkan ke kanal lead resmi.</div></form>
     </div>
   </section>
 </main>
